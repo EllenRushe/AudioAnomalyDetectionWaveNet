@@ -1,0 +1,53 @@
+default: &DEFAULT
+  binaries_dir: 'data_binaries'
+  num_epochs: 10
+  batch_size: 16
+  pre_fetch: 10
+  gpu_vis_dev: '0'
+
+
+CAE:
+  <<: *DEFAULT
+  num_epochs: 10
+  gpu_vis_dev: '0'
+  batch_size: 32
+  model: CAE
+  checkpoints_dir: 'checkpoints/checkpoints_cae'
+  log_dir: 'logs/logs_cae'
+  preds_dir: 'preds/test_preds_cae'
+  labels_dir: 'labels/test_labels_cae'
+  targets_dir: 'targets/targets_cae'
+  val_dir: 'eval/val/val_cae'
+  segment_length: 4096
+  segment_overlap: 4096
+  num_gpus: 1
+  model_params: 
+    num_layers: 10 
+    num_filters: 64
+    kernel_size: 3
+    learning_rate: 0.0001
+
+
+WaveNet:
+  <<: *DEFAULT
+  num_epochs: 10
+  gpu_vis_dev: '0'
+  model: WaveNet
+  batch_size: 16
+  checkpoints_dir: 'checkpoints/checkpoints_wavenet'
+  log_dir: 'logs/logs_wavenet'
+  preds_dir: 'preds/test_preds_wavenet'
+  labels_dir: 'labels/test_labels_wavenet'
+  targets_dir: 'targets/targets_wavenet'
+  val_dir: 'eval/val/val_wavenet'
+  segment_length: 4096
+  segment_overlap: 4096
+  num_gpus: 1
+  model_params:  
+    num_stacks: 2
+    stack_size: 10
+    num_filters: 256
+    num_skip_filters: 512
+    kernel_size: 3
+    learning_rate: 0.00001
+

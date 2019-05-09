@@ -1,0 +1,13 @@
+**/.ipynb_checkpoints
+**/.DS_Store
+**/.idea
+**/__pycache__
+data_binaries
+data
+data_binaries
+checkpoints
+preds
+targets
+labels
+logs
+eval
