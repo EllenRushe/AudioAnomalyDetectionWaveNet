@@ -14,7 +14,7 @@ To run experiment, modify the following 3 files or leave with default values.
 
 1. HParmas.yaml : This contains all hyperparameters for each mode. The two models present are a CAE (convolutional autoencoder) and a WaveNet model. 
 
-2. config.yaml: This simply contains the data directory. 
+2. config.yaml: This simply contains the data directory. (Note: In this file, the file path is set to be a relative path. It has been noted that for at least some systems an absolute path might be necessary to include for DCASE's dcase_util.datasets.TUTRareSoundEvents_2017_DevelopmentSet.file_meta to return the necessary data.)
 
 3. run.sh : This script contains a loop to train a model for each scene. It takes two command line arguments. The model name (defined in HParams.yaml) and the mode (either 'train' or 'test')
 
