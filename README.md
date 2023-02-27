@@ -1,5 +1,3 @@
-**Issues and pull requests are temporarily disabled/can't be granted for a number of weeks as the maintainer is away.**
-
 Ellen Rushe, and Brian Mac Namee. "Anomaly Detection in Raw Audio Using Deep Autoregressive Networks." IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2019.
 
 [Poster](https://sigport.org/documents/anomaly-detection-raw-audio-using-deep-autoregressive-networks)
